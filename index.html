@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <title>Design a Pizza</title>
+    <link href="css/styles.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+
+        <div class="content">
+            <h1>Ferrari Pizza</h1>
+            <div class="size">
+                <h2>Size</h2>
+                <input type="radio" id="small" name="size" value="all" onclick="DisplayPrice(this.value)">
+                <label for="small">Small</label>
+                <input type="radio" id="medium" name="size" value="false">
+                <label for="medium">Medium</label>
+                <input type="radio" id="large" name="size" value="false">
+                <label for="large">Large</label>
+            </div>
+            <form action="/action_page.php">
+          
+            <div class="base">
+                <h2>Bases</h2>
+                <input type="radio" id="pan" name="base" value="all" onclick="DisplayPrice(this.value)">
+                <label for="pan">Crispy</label>
+                <input type="radio" id="italian" name="base" value="false">
+                <label for="italian">Italian</label>
+                <input type="radio" id="stuffed" name="base" value="false">
+                <label for="stuffed">Stuffed Crust</label>
+                <input type="radio" id="gfree" name="base" value="false">
+                <label for="gfree">Gluten Free</label>
+            </div>
+            <div class="toppings">
+                <h2>Toppings</h2>
+                <input type="checkbox" id="chicken" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="Pepperoni">Pepperoni</label>
+                <input type="checkbox" id="Pepperoni" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="Pepperoni">Pepperoni</label>
+                <input type="checkbox" id="ham" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="ham">Ham</label>
+                <input type="checkbox" id="crispybacon" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="crispybacon">Crispy Bacon</label>
+                <input type="checkbox" id="sausage" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="sausage">Spicy Pork Sausage</label>
+                <input type="checkbox" id="steak" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="steak">Steak</label>
+                <input type="checkbox" id="mixedpeppers" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="mixedpeppers">Mixed Peppers</label>
+                <input type="checkbox" id="mushrooms" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="mushrooms">Mushrooms</label>
+                <input type="checkbox" id="tomato" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="tomato">Tomato</label>
+                <input type="checkbox" id="pineapple" name="topping" value="all" onclick="DisplayPrice(this.value)">
+                <label for="pineapple">Pineapple</label>
+
+
+            </div>
+            <form action="/action_page.php">
+                <select name="cars">
+                  <option value="volvo"></option>
+                  <option value="saab">Saab 95</option>
+                  <option value="mercedes">Mercedes SLK</option>
+                  <option value="audi">Audi TT</option>
+                </select>
+                <input type="submit" value="Submit">
+              </form>
+            
+        </div>
+        <div class="spaces">
+               <img src="https://rb.gy/5ih6zz">
+        </div>
+        <div class="spaces">
+            <img src="https://rb.gy/5ih6zz">
+     </div>
+    </div>
+</body>
+
+</html>
