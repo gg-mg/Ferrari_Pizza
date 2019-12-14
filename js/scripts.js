@@ -16,12 +16,12 @@ function Pizza(pizzaSize, crust, toppings) {
     this.vegToppings = [];
 }
 
-Pizza.prototype.addMeat = function(meat) {
+Pizza.prototype.addMeat = function (meat) {
     this.meatToppings.push(meat);
-  }
-  Pizza.prototype.addVeg = function(veggie) {
+}
+Pizza.prototype.addVeg = function (veggie) {
     this.vegToppings.push(veggie);
-  }
+}
 Pizza.prototype.calculateCost = function () {
     var cost = 0;
 
