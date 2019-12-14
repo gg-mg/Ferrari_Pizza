@@ -1,9 +1,12 @@
-.spaces {
-   
-    background-image: url('https://rb.gy/5ih6zz');
-   ;
-   
+
   
-   h1{
-      color:red;
+h1{
+    color: rgb(175, 124, 76);
   }
+.spaces {
+    background-image: url('https://rb.gy/5ih6zz');
+}
+   
+ body{
+     background-color: sandybrown;
+ }   
