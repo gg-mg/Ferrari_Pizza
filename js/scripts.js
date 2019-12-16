@@ -3,6 +3,7 @@
 // ================================
 $(document).ready(function () {
 
+
   function Pizza(pizzaSize, crusts) {
     this.pizzaSize = pizzaSize;
     this.crusts = crusts;
@@ -197,13 +198,17 @@ $(document).ready(function () {
     $("#yes").click(function () {
       $("#enter_info").show();
     });
+    $("#no").click(function () {
+      $("#checkout-order").show();
+    });
 
     $("#submit").click(function () {
-      alert("Your order is on its way")
+      alert("Your order will be delivered to your location")
       return
     })
 
-    $("#checkout-order").click(function () {
+    $("#order_summary").click(function () {
+      alert("We deliver at a price of KSH 1000 to any location within Nairobi");
       $(".delivery_option").show();
     });
 

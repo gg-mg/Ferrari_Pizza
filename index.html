@@ -12,6 +12,8 @@
   <body>
     <div class="header page-header">
       <h1>Ferrari Pizza</h1>
+      <h1>Muindi Bingu Street</h1>
+      <h1>Nairobi, Kenya</h1>
       <h2>BEST PIZZA IN TOWN!</h2>
     </div>
     <div class="container">
@@ -101,8 +103,8 @@
         <p>Click on a pizza to view and hide more information.</p>
         <div class="pizza-list"></div>
         <h3>Total Cost: <span id="pizza-list-total-cost"></span></h3>
-        <button id="add-another-pizza" class="btn btn-success">Add another Pizza</button>
-        <button id="checkout-order" class="btn btn-success">Checkout Out</button>
+        <button id="add-another-pizza" class="btn btn-success">Add Another Pizza</button>
+        <button id="order_summary" class="btn btn-success">Order Summary</button>
 
 
       </div>
@@ -110,6 +112,7 @@
       <div class="delivery_option form-group">
         <h4>Delivery Option</h4>
         <label class="checkbox-inline"><button name="delivery" id="yes" value="yes">Yes</button></label>
+        <label class="checkbox-inline"><button name="delivery" id="no" value="no">No</button></label>
         <form id="enter_info">
           <h3>Enter your information.</h3>
           <div class="form-group">
@@ -132,10 +135,7 @@
             <label for="customer-phone">Phone Number: </label>
             <input id="customer-phone" type="text" placeholder="0722-55-5555">
           </div>
-          <div class="form-group">
-            <label class="checkbox-inline"><input type="radio" name="cash-credit" value="cash" checked>Cash</label>
-            <label class="checkbox-inline"><input type="radio" name="cash-credit" value="credit">Credit</label>
-          </div>
+
           <button type="submit" class="btn btn-success" id="submit">Submit</button>
         </form>
       </div>
@@ -145,9 +145,12 @@
         <h3>Your order is on its way!</h3>
         <p>Click below to place a new order.</p>
       </div>
-      <div>
-        <button type="button" class="btn btn-success" id="new-order">New Order</button>
-      </div>
+
+      <div><button id="checkout-order" class="btn btn-success">Checkout Out</button></div>
+
+
+      <div><button type="button" class="btn btn-success" id="new-order">New Order</button></div>
+
     </div>
 
     <div class="spaces">
