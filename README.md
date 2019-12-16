@@ -2,7 +2,7 @@
 Ferrari Pizza is a school project to demonstrate knowledge of HTML, CSS, JAVASRIPT.
 
 ## Technologies
-In this project, incorporates  HTML (index.html), CSS (styles.css and bootstrap), JAVASRIPT(scripts.js and jQuery). The website is responsive accross different devices.
+This project, incorporates  HTML (index.html), CSS (styles.css and bootstrap), JAVASRIPT(scripts.js and jQuery). The website is responsive accross different devices.
 
 ## Set/Installation
 The Ferrari Studio website was created using Visual Studio 2015.
