@@ -1,25 +1,27 @@
-<!DOCTYPE html>
-<html>
+  <!DOCTYPE html>
+  <html>
+
   <head>
     <meta charset="utf-8">
-    <title>Pepino's Pizza</title>
+    <title>Ferrari Pizza</title>
 
-  	<!-- jquery-2.2.0 -->
-  	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- jquery-2.2.0 -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-  	<!-- bootstrap w/ optional theme -->
-  	<link rel="stylesheet" href="css/bootstrap.min.css">
-  	<link rel="stylesheet" href="css/bootstrap-theme.min.css">
-  	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+    <!-- bootstrap w/ optional theme -->
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap-theme.min.css">
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
 
-  	<!-- my css and js -->
-  	<link rel="stylesheet" href="css/styles.css">
-  	<script type="text/javascript" src="js/scripts.js"></script>
+    <!-- my css and js -->
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/scripts.js"></script>
   </head>
+
   <body>
     <div class="header page-header">
-      <h1>Pepino's Pizza</h1>
-      <h2>Only the finest ingredients!</h2>
+      <h1>Ferrari Pizza</h1>
+      <h2>BEST PIZZA IN TOWN!</h2>
     </div>
     <div class="container">
       <div class="launch-order">
@@ -62,13 +64,15 @@
         <form>
           <div class="size form-group">
             <h4>Pie Size:</h4>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="small"> Small ($7)</label>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="medium" checked> Medium ($9)</label>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="large"> Large ($11)</label>
-            <label class="checkbox-inline"><input type="radio" name="pie-size" value="extra large"> Extra Large ($13)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="small"> Small (KSH 500)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="medium" checked> Medium
+              (KSH 700)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="large"> Large (KSH 900)</label>
+            <label class="checkbox-inline"><input type="radio" name="pie-size" value="extra large"> Extra Large
+              (KSH 1100)</label>
           </div>
           <div class="meat-toppings  form-group">
-            <h4>Meats: ($1.25 each) </h4>
+            <h4>Meats: (KSH 200) </h4>
             <label class="checkbox-inline">
               <input type="checkbox" name="meat-toppings" value="Pepperoni">Pepperoni
             </label>
@@ -95,7 +99,7 @@
             </label>
           </div>
           <div class="veg-toppings  form-group">
-            <h4>Veggies: ($0.75 each) </h4>
+            <h4>Veggies: (KSH 150) </h4>
             <label class="checkbox-inline">
               <input type="checkbox" name="veg-toppings" value="Olives">Olives
             </label>
@@ -126,9 +130,10 @@
           </div>
           <div class="cheese  form-group">
             <h4>Cheese:</h4>
-            <label class="checkbox"><input type="radio" name="cheese-options" value="regular" checked>  Regular</label>
-            <label class="checkbox"><input type="radio" name="cheese-options" value="extra">  Extra Cheese <em>(add $1)</em></label>
-            <label class="checkbox"><input type="radio" name="cheese-options" value="none">  No Cheese</label>
+            <label class="checkbox"><input type="radio" name="cheese-options" value="regular" checked> Regular</label>
+            <label class="checkbox"><input type="radio" name="cheese-options" value="extra"> Extra Cheese <em>(add
+                KSH 100)</em></label>
+            <label class="checkbox"><input type="radio" name="cheese-options" value="none"> No Cheese</label>
           </div>
           <button type="submit" class="btn btn-success">Add Pizza</button>
         </form>
@@ -145,9 +150,9 @@
         <h3>Your order is on its way!</h3>
         <p>Click below to place a new order.</p>
         <button type="button" class="btn btn-success" id="new-order">New Order</button>
-        <p>This site was constructed to demonstrate the use of Object Oriented Programming. Click the button below to log the complete customer order object to the console. Customer order object includes all customer information, pizzas, and totalCost. (open the console with alt-cmd-j in chrome)</p>
-        <buton class="btn btn-default" id="console-log">Log Object to Console</buton>
+
       </div>
     </div>
   </body>
-</html>
+
+  </html>
