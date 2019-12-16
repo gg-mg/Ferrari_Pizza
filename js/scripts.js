@@ -33,13 +33,13 @@ Pizza.prototype.refreshCost = function () {
   if (this.crusts === "crispy") {
     cost += 200;
   }
-  if (this.pizzaSize === "italian") {
+  if (this.crusts === "italian") {
     cost += 150;
   }
-  if (this.pizzaSize === "stuffed") {
+  if (this.crusts === "stuffed") {
     cost += 100;
   }
-  if (this.pizzaSize === "gfree") {
+  if (this.crusts === "glutenfree") {
     cost += 250;
   }
   this.meatToppings.forEach(function () {
@@ -96,6 +96,7 @@ var createPizza = function () {
   var pizzaSize = $('input[name="pie-size"]:checked').val();
   var crusts = $('input[name="crusts"]:checked').val();
   var newPizza = new Pizza(pizzaSize,crusts);
+  var meatToppings = [];
   $('input[name="meat-toppings"]:checked').each(function () {
     newPizza.addMeat($(this).val());
   });
@@ -117,7 +118,7 @@ var resetPizzaForm = function () {
 var populatePizzaList = function (pizza) {
   $('.pizza-list').append('<div class="pizza">' +
     '<h4><span class="pizza-list-size">- One ' + pizza.pizzaSize + ' pizza</span></h4>' +
-    '<h5><span class="crusts"> - ' + pizza.crusts + ' pizza</span></h5>' +
+    '<h5><span class="crusts"> - ' + pizza.crusts + ' crust</span></h5>' +
     '<div class="pizza-info-toggle">' +
     '<p>Meat toppings: </p>' +
     '<ul class="pizza-list-meat-toppings"></ul>' +
