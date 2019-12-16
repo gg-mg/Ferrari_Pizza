@@ -25,3 +25,9 @@ body {
 .delivery_option {
     display: none;
 }
+@media screen and (max-width: 600px) {
+    body {
+        background-color: lightblue;
+    }
+  }
+  
