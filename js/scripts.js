@@ -9,7 +9,7 @@ $(document).ready(function () {
     this.crusts = crusts;
     this.meatToppings = [];
     this.vegToppings = [];
-    // this.cost (created in the refreshCost method)
+
   }
   Pizza.prototype.addMeat = function (meat) {
     this.meatToppings.push(meat);
@@ -53,7 +53,7 @@ $(document).ready(function () {
     this.cost = cost;
   }
 
-  // Order Constructor, represents a customer order containing multiple pizzas
+
   function Order(customerName, customerAddress, customerPhone, customerCashCredit) {
     this.customerName = customerName;
     this.customerAddress = customerAddress;
@@ -151,19 +151,18 @@ $(document).ready(function () {
   $(document).ready(function () {
     var customerOrder = new Order();
 
-    // event handler for begin ordering button
     $('.launch-order button').click(function () {
       nextDiv('.launch-order', '.order-information-input');
     });
 
-    // event handler for customer information submit
+
     $('.order-information-input form').submit(function (event) {
       event.preventDefault();
       customerOrder = createCustomerOrder();
       nextDiv('.order-information-input', '.order-pizza-input');
     });
 
-    // event handler for add pizza
+
     $('.order-pizza-input form').submit(function (event) {
       event.preventDefault();
       var thisPizza = createPizza();
@@ -173,24 +172,20 @@ $(document).ready(function () {
       nextDiv('.order-pizza-input', '.order-summary');
     });
 
-    // event handler for add another pizza
     $('#add-another-pizza').click(function () {
       nextDiv('.order-summary', '.order-pizza-input');
     });
 
-    // event handler for checkout order
-    // $('#checkout-order').click(function () {
-    //   nextDiv('.order-summary', '.checked-out');
-    // });
 
-    // event handler for new order/reset site
+
+
     $('#new-order').click(function () {
       customerOrder = new Order();
       $('.pizza-list').empty();
       nextDiv('.checked-out', '.launch-order');
     });
 
-    // event handler for log object to console
+
     $('#console-log').click(function () {
       alert(customerOrder);
     });
@@ -203,16 +198,16 @@ $(document).ready(function () {
     });
 
     $("#submit").click(function () {
-     
+
       alert("Your order will be delivered to your location")
       return
     })
 
     $("#checkout-order").click(function () {
-      alert("Your order total before delivery charges is "+ 'KSH ' + populateTotalPrice(customerOrder).toFixed(2) +"." +
-            " We deliver at an extra price of KSH 1000 to any location within Nairobi")
-      
-     
+      alert("Your order total before delivery charges is " + 'KSH ' + populateTotalPrice(customerOrder).toFixed(2) + "." +
+        " We deliver at an extra price of KSH 1000 to any location within Nairobi")
+
+
       $(".delivery_option").show();
     });
 
