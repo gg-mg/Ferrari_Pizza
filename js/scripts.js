@@ -3,8 +3,9 @@
 // ================================
 
 
-function Pizza(pizzaSize) {
+function Pizza(pizzaSize,crusts) {
   this.pizzaSize = pizzaSize;
+  this.crusts=crusts;
   this.meatToppings = [];
   this.vegToppings = [];
   // this.cost (created in the refreshCost method)
@@ -28,6 +29,18 @@ Pizza.prototype.refreshCost = function () {
   }
   if (this.pizzaSize === "extra large") {
     cost = 1000;
+  }
+  if (this.crusts === "crispy") {
+    cost += 200;
+  }
+  if (this.pizzaSize === "italian") {
+    cost += 150;
+  }
+  if (this.pizzaSize === "stuffed") {
+    cost += 100;
+  }
+  if (this.pizzaSize === "gfree") {
+    cost += 250;
   }
   this.meatToppings.forEach(function () {
     cost += 200;
@@ -81,8 +94,8 @@ var createCustomerOrder = function () {
 }
 var createPizza = function () {
   var pizzaSize = $('input[name="pie-size"]:checked').val();
-
-  var newPizza = new Pizza(pizzaSize);
+  var crusts = $('input[name="crusts"]:checked').val();
+  var newPizza = new Pizza(pizzaSize,crusts);
   $('input[name="meat-toppings"]:checked').each(function () {
     newPizza.addMeat($(this).val());
   });
@@ -95,6 +108,7 @@ var createPizza = function () {
 }
 var resetPizzaForm = function () {
   $('input[name="pie-size"]:checked').attr("checked", false);
+  $('input[name="crusts"]:checked').attr("checked", false);
   $('input[value="medium"]').prop("checked", true);
   $('input[value="regular"]').prop("checked", true);
   $('input[name="meat-toppings"]:checked').attr("checked", false);
@@ -103,6 +117,7 @@ var resetPizzaForm = function () {
 var populatePizzaList = function (pizza) {
   $('.pizza-list').append('<div class="pizza">' +
     '<h4><span class="pizza-list-size">- One ' + pizza.pizzaSize + ' pizza</span></h4>' +
+    '<h5><span class="crusts"> - ' + pizza.crusts + ' pizza</span></h5>' +
     '<div class="pizza-info-toggle">' +
     '<p>Meat toppings: </p>' +
     '<ul class="pizza-list-meat-toppings"></ul>' +
