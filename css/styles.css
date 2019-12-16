@@ -13,9 +13,15 @@ body {
 .form-group {
     padding: 1%;
 }
-#enter_info{
+
+#enter_info {
     display: none;
 }
-.checked-out{
+
+.checked-out {
+    display: none;
+}
+
+.delivery_option {
     display: none;
 }
