@@ -13,3 +13,9 @@ body {
 .form-group {
     padding: 1%;
 }
+#enter_info{
+    display: none;
+}
+.checked-out{
+    display: none;
+}
