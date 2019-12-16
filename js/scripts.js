@@ -108,7 +108,7 @@ var populatePizzaList = function (pizza) {
     '<ul class="pizza-list-meat-toppings"></ul>' +
     '<p>Veggie toppings: </p>' +
     '<ul class="pizza-list-veg-toppings"></ul>' +
-    '<p>Cost of this pizza: $<span>' + pizza.cost.toFixed(2) + '</span></p>' +
+    '<p>Cost of this pizza: $<span>' + pizza.cost + '</span></p>' +
     '</div>' +
     '</div>');
   pizza.meatToppings.forEach(function (meatTopping) {
