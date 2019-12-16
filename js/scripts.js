@@ -2,10 +2,9 @@
 //     Business Logic
 // ================================
 
-// Pizza Constructor, represents a single pizza
-function Pizza(pizzaSize, cheese) {
+
+function Pizza(pizzaSize) {
   this.pizzaSize = pizzaSize;
-  this.cheese = cheese;
   this.meatToppings = [];
   this.vegToppings = [];
   // this.cost (created in the refreshCost method)
@@ -20,12 +19,15 @@ Pizza.prototype.refreshCost = function () {
   var cost = 0;
   if (this.pizzaSize === "medium") {
     cost = 700;
-  } if (this.pizzaSize === "small") {
+  }
+  if (this.pizzaSize === "small") {
     cost = 500;
-  } if (this.pizzaSize === "large") {
+  }
+  if (this.pizzaSize === "large") {
     cost = 900;
-  } if (this.pizzaSize === "extra large") {
-    cost = 1100;
+  }
+  if (this.pizzaSize === "extra large") {
+    cost = 1000;
   }
   this.meatToppings.forEach(function () {
     cost += 200;
@@ -33,9 +35,7 @@ Pizza.prototype.refreshCost = function () {
   this.vegToppings.forEach(function () {
     cost += 150;
   });
-  if (this.cheese === "extra") {
-    cost += 100;
-  }
+
   this.cost = cost;
 }
 
@@ -81,8 +81,8 @@ var createCustomerOrder = function () {
 }
 var createPizza = function () {
   var pizzaSize = $('input[name="pie-size"]:checked').val();
-  var cheese = $('input[name="cheese-options"]:checked').val();
-  var newPizza = new Pizza(pizzaSize, cheese);
+
+  var newPizza = new Pizza(pizzaSize);
   $('input[name="meat-toppings"]:checked').each(function () {
     newPizza.addMeat($(this).val());
   });
@@ -96,7 +96,6 @@ var createPizza = function () {
 var resetPizzaForm = function () {
   $('input[name="pie-size"]:checked').attr("checked", false);
   $('input[value="medium"]').prop("checked", true);
-  $('input[name="cheese-options"]:checked').attr("checked", false);
   $('input[value="regular"]').prop("checked", true);
   $('input[name="meat-toppings"]:checked').attr("checked", false);
   $('input[name="veg-toppings"]:checked').attr("checked", false);
@@ -105,7 +104,6 @@ var populatePizzaList = function (pizza) {
   $('.pizza-list').append('<div class="pizza">' +
     '<h4><span class="pizza-list-size">- One ' + pizza.pizzaSize + ' pizza</span></h4>' +
     '<div class="pizza-info-toggle">' +
-    '<p>Cheese: <span class="pizza-list-cheese">' + pizza.cheese + '</span></p>' +
     '<p>Meat toppings: </p>' +
     '<ul class="pizza-list-meat-toppings"></ul>' +
     '<p>Veggie toppings: </p>' +
@@ -177,7 +175,7 @@ $(document).ready(function () {
 
   // event handler for log object to console
   $('#console-log').click(function () {
-    console.log(customerOrder);
+    alert(customerOrder);
   })
 
 });
