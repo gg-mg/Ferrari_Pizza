@@ -124,7 +124,7 @@ var populatePizzaList = function (pizza) {
     '<ul class="pizza-list-meat-toppings"></ul>' +
     '<p>Veggie toppings: </p>' +
     '<ul class="pizza-list-veg-toppings"></ul>' +
-    '<p>Cost of this pizza: $<span>' + pizza.cost + '</span></p>' +
+    '<p>Cost of this pizza: KSH<span>' + pizza.cost + '</span></p>' +
     '</div>' +
     '</div>');
   pizza.meatToppings.forEach(function (meatTopping) {
@@ -168,7 +168,7 @@ $(document).ready(function () {
     var thisPizza = createPizza();
     customerOrder.addPizza(thisPizza);
     populatePizzaList(thisPizza);
-    $("#pizza-list-total-cost").text('$ ' + populateTotalPrice(customerOrder).toFixed(2));
+    $("#pizza-list-total-cost").text('KSH ' + populateTotalPrice(customerOrder).toFixed(2));
     nextDiv('.order-pizza-input', '.order-summary');
   });
 
