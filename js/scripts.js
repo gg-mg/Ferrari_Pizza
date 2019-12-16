@@ -203,12 +203,16 @@ $(document).ready(function () {
     });
 
     $("#submit").click(function () {
+     
       alert("Your order will be delivered to your location")
       return
     })
 
-    $("#order_summary").click(function () {
-      alert("We deliver at a price of KSH 1000 to any location within Nairobi");
+    $("#checkout-order").click(function () {
+      alert("Your order total before delivery charges is "+ 'KSH ' + populateTotalPrice(customerOrder).toFixed(2) +"." +
+            " We deliver at a price of KSH 1000 to any location within Nairobi")
+      
+     
       $(".delivery_option").show();
     });
 
