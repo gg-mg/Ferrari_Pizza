@@ -20,12 +20,12 @@ Pizza.prototype.refreshCost = function () {
   var cost = 0;
   if (this.pizzaSize === "medium") {
     cost = 700;
-  } else if (this.pizzaSize === "small") {
+  } if (this.pizzaSize === "small") {
     cost = 500;
-  } else if (this.pizzaSize === "large") {
+  } if (this.pizzaSize === "large") {
     cost = 900;
-  } else if (this.pizzaSize === "extra large") {
-    cost = 1000;
+  } if (this.pizzaSize === "extra large") {
+    cost = 1100;
   }
   this.meatToppings.forEach(function () {
     cost += 200;
