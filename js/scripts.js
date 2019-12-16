@@ -3,9 +3,9 @@
 // ================================
 
 
-function Pizza(pizzaSize,crusts) {
+function Pizza(pizzaSize, crusts) {
   this.pizzaSize = pizzaSize;
-  this.crusts=crusts;
+  this.crusts = crusts;
   this.meatToppings = [];
   this.vegToppings = [];
   // this.cost (created in the refreshCost method)
@@ -95,7 +95,7 @@ var createCustomerOrder = function () {
 var createPizza = function () {
   var pizzaSize = $('input[name="pie-size"]:checked').val();
   var crusts = $('input[name="crusts"]:checked').val();
-  var newPizza = new Pizza(pizzaSize,crusts);
+  var newPizza = new Pizza(pizzaSize, crusts);
   var meatToppings = [];
   $('input[name="meat-toppings"]:checked').each(function () {
     newPizza.addMeat($(this).val());
