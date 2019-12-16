@@ -44,32 +44,32 @@ $(document).ready(function () {
       cost += 250;
     }
     this.meatToppings.forEach(function () {
-      if(this.pizzaSize === "medium") {     
+      if (this.pizzaSize === "medium") {
         cost += 200;
       }
-      if(this.pizzaSize === "small") {     
-          cost += 150;
-      }
-       if(this.pizzaSize === "large") {     
-            cost += 250;
-       }
-      if(this.pizzaSize === "medium") {     
-              cost += 300;
-      }
-      
-    });
-    this.vegToppings.forEach(function () {
-      if(this.pizzaSize === "medium") {     
+      if (this.pizzaSize === "small") {
         cost += 150;
       }
-      if(this.pizzaSize === "small") {     
-          cost += 100;
+      if (this.pizzaSize === "large") {
+        cost += 250;
       }
-       if(this.pizzaSize === "large") {     
-            cost += 200;
-       }
-      if(this.pizzaSize === "medium") {     
-              cost += 250;
+      if (this.pizzaSize === "medium") {
+        cost += 300;
+      }
+
+    });
+    this.vegToppings.forEach(function () {
+      if (this.pizzaSize === "medium") {
+        cost += 150;
+      }
+      if (this.pizzaSize === "small") {
+        cost += 100;
+      }
+      if (this.pizzaSize === "large") {
+        cost += 200;
+      }
+      if (this.pizzaSize === "medium") {
+        cost += 250;
       }
     });
 
