@@ -201,7 +201,6 @@ $(document).ready(function () {
 
 
 
-
     $('#new-order').click(function () {
       customerOrder = new Order();
       $('.pizza-list').empty();
@@ -217,19 +216,19 @@ $(document).ready(function () {
       $("#enter_info").show();
     });
     $("#no").click(function () {
-     alert("Your order total is " + 'KSH ' + populateTotalPrice(customerOrder).toFixed(2))
+      alert("Total money due: " + 'KSH ' + populateTotalPrice(customerOrder).toFixed(2))
     });
 
     $("#submit").click(function () {
 
-      alert("Your order will be delivered to your location")     
-      alert("Your order total is " + 'KSH ' + (populateTotalPrice(customerOrder)+1000).toFixed(2))
+      alert("Your order will be delivered to your location")
+      alert("Total money due: " + 'KSH ' + (populateTotalPrice(customerOrder) + 1000).toFixed(2))
       return
     })
 
     $("#checkout-order").click(function () {
       alert(" We deliver at an extra price of KSH 1000 to any location within Nairobi")
-       
+
 
 
       $(".delivery_option").show();
